@@ -1,0 +1,196 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "_useUniSwapV2",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "_quote",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_base",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_slippage",
+						"type": "uint256"
+					}
+				],
+				"name": "executeTrade",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "uFactoryV3",
+				"outputs": [
+					{
+						"internalType": "contract IUniswapV3Factory",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "uRouterV2",
+				"outputs": [
+					{
+						"internalType": "contract IUniswapV2Router02",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "uRouterV3",
+				"outputs": [
+					{
+						"internalType": "contract ISwapRouter",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"executeTrade(bool,address,address,uint256,uint256)": {
+					"notice": "Swaps a fixed amount of WETH for a maximum possible amount of DAI"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Copy_Swap.sol": "SwapV2"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Copy_Swap.sol": {
+			"keccak256": "0xdc838afd0655013b00732f914d74ebb5a95a52ac5cbb0a4802bb538800b5be34",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ad0dc29ac0c7620230705232292a7386cd7fc3dbdbff0e1a4ac816872b05eb0d",
+				"dweb:/ipfs/QmRftdTFgKoRL4KatA9cxEjzc2TXX8Kgs2JiHXnW8Xxk9z"
+			]
+		},
+		"contracts/lib/IERC20.sol": {
+			"keccak256": "0x221f58e664616363e2e6100a580e00671e00842eff1c3116be931cdf5994981c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://700736dcb37cbf4725690e0954dcc01a89b15ff8abed319b0c84c56a227c2653",
+				"dweb:/ipfs/Qmb5tMhsnBHrDUTP8jLTDPQHLF3gaQTRAuLzTw2SZQCHq2"
+			]
+		},
+		"contracts/lib/IQuoter.sol": {
+			"keccak256": "0xce146aea53c0c0a26f1b6492c7b2ba2ca346632af86d0f0a3ed9a9b85daab677",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://8c1f61663fe1cc469cda3cd6111b223cbd8581ae0be4b1223e6d10cedb99bd8c",
+				"dweb:/ipfs/QmUbtJ3SpZhy8YAaufufxvcysL6ym1neyZHMHQeUzBhjpD"
+			]
+		},
+		"contracts/lib/IUniSwapV2.sol": {
+			"keccak256": "0x40903a655569d12eb289148fe8f7c8caf3bf112c72f86abe515e6543bf18234a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://325ae8ccb6a33a23b471b770801b46741824b1a469ea9a4dbe342f7873984994",
+				"dweb:/ipfs/QmPtQjWZWXA6M5p1bfi5dPuvMUbYrYm9Gbei4uNCywSDrW"
+			]
+		},
+		"contracts/lib/IUniSwapV3.sol": {
+			"keccak256": "0xd40aa4465ca5385030456e42ff2a2cb2e60db8f9852cdf6b25cbc43e6c85fef3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9a8798ca109c1772f5ff91b1bbc11effc72be2d1149a582d8e5d19c4b59e1390",
+				"dweb:/ipfs/QmZJRKSg9SHTAxQot8VjAPLuT8eCG1VYZkRGYHLpSZ69oD"
+			]
+		},
+		"contracts/lib/IUniSwapV3Factory.sol": {
+			"keccak256": "0x9e8876889981816d28240986588cdb8be394cbbcf59aed3d05179347856a21fa",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c5c6c90be21df5d2a41379c07ba97b3921a240d3dfd735a043bf33a579b8a143",
+				"dweb:/ipfs/QmRt5MW8Ezt55yQVKj6txyo47UP2maDimYj3UJPuo71N8J"
+			]
+		},
+		"contracts/lib/IUniswapV3SwapCallback.sol": {
+			"keccak256": "0x207d7faea714be3fef77ae7230ecbafbd06ea9ba317fa1c1e5f0001aa263ca1d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2f6a0df9f6c44b3c1a4ff189aa6438aa1886d6d55b5732a6e37aff209a30dc71",
+				"dweb:/ipfs/Qmaam8soz4gShTim5V8HnPTo7SD242wLHXUH5EZe16w6ue"
+			]
+		},
+		"contracts/lib/SafeMath.sol": {
+			"keccak256": "0x0fe4c719063b6a0c1ac8ea79522f047faa68eb2f6ab1d957ebeb3343b15b81f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5907a0692b29b47b8dc8b5b5f13d35d11e0fc7285bfd73932fff94888a3f504b",
+				"dweb:/ipfs/QmdzA8CnR5xBAZkTfFypKmuspu9h2bDqUjxHQhN1ZjTvSC"
+			]
+		}
+	},
+	"version": 1
+}
